@@ -2,25 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Browser Support
+Currently, the known web browsers that support this web app are:
+* Desktop versions of Chrome.
+* Android-based versions of Firefox.
 
-## Code scaffolding
+## Known issues
+* Desktop Firefox (and possibly Webkit-based browsers) do not handle calendar input tags prpperly, as detailed here: https://stackoverflow.com/questions/22983013/how-to-get-html-5-input-type-date-working-in-firefox-and-or-ie-10.
+* iOS-based Safari & Chrome do not get past the loading screen (maybe Gecko-based browsers in general).
+
+## Generating, running and testing
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
-
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
