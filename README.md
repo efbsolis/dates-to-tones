@@ -1,6 +1,5 @@
 # DatesToTones
-
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+Takes two calendar dates and generates a triad of oscillator-based notes.
 ![App screenshot](app-screenshot.png "App screenshot")
 
 ## Browser Support
