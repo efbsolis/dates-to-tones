@@ -8,7 +8,7 @@ Currently, the known web browsers that support this web app are:
 * Android-based versions of Firefox.
 
 ## Known issues
-* Desktop Firefox (and possibly Webkit-based browsers) do not handle calendar input tags prpperly, as detailed here: https://stackoverflow.com/questions/22983013/how-to-get-html-5-input-type-date-working-in-firefox-and-or-ie-10.
+* Desktop Firefox (and possibly Webkit-based browsers) do not handle calendar input tags properly, as detailed here: https://stackoverflow.com/questions/22983013/how-to-get-html-5-input-type-date-working-in-firefox-and-or-ie-10.
 * iOS-based Safari & Chrome do not get past the loading screen (maybe Gecko-based browsers in general).
 
 ## Generating, running and testing
