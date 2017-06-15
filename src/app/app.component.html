@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-md-12">
+      <br>
+      <a class="small" href="../index.html">Return home.</a>
+      <hr>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-sm-6">
+      <h1>Calendar to tone harmonies</h1>
+      <a *ngIf="!soundEnabled" (click)="toggleSound()"
+      class="btn btn-default btn-lg btn-block">Sound off</a>
+      <a *ngIf="soundEnabled" (click)="toggleSound()"
+      class="btn btn-success btn-lg btn-block">Sound on</a>
+      <br>
+    </div>
+    <div class="col-sm-6">
+      <div *ngIf="this.showHint" class="well">
+        <p class="small">This is a small app that produces harmonies based on dates of
+          the year. It treats a year like a wheel that begins in January and rolls
+          back through December, and finds out, clockwise and counterclockwise, how
+          many days separate these two dates from either side. These are turned into
+          ratios by comparing their relative sizes, and these ratios become notes.</p>
+        <p class="small">One particularly good sounding pair of dates you can try out
+          is 07/03/1974 and 11/02/1985.</p>
+        <p class="btn btn-primary btn-sm" (click)="toggleHint()">Got it!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">First date</div>
+        <div class="panel-body">
+          <input [(ngModel)]="calendarDate1" (change)="onKey(1)" type="date"/>
+          <p><small>(Day #{{dayOfYear1}} of year)</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Second date</div>
+        <div class="panel-body">
+          <input [(ngModel)]="calendarDate2" (change)="onKey(2)" type="date"/>
+          <p><small>(Day #{{dayOfYear2}} of year)</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div *ngIf="systemMessage" class="alert alert-warning" role="alert">
+      <p>{{systemMessage}}</p>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div class="col-sm-4">
+      <h4>Date ranges</h4>
+      <p>1st date<— {{firstRange}} day{{firstRangePlural}}—>2nd date<br>
+        2nd date<— {{secondRange}} day{{secondRangePlural}}—>1st date</p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Calculated ratios</h4>
+        <p>First ratio: {{firstRatio}}<br>
+          Second ratio: {{secondRatio}}</p>
+        </div>
+        <div class="col-sm-4">
+          <h4>Notes</h4>
+          <p>Root note: {{baseFrequency}}Hz<br>
+            Second note: {{secondFrequency | number : '1.2-2'}}Hz<br>
+            Third note: {{thirdFrequency | number : '1.2-2'}}Hz</p>
+          </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-md-12">
+      <hr>
+      <p class="small">Theme: <a href="http://bootswatch.com/darkly">Darkly
+        Bootswatch theme.</a></p>
+        <p class="small">Github: <a href="https://github.com/skinsvideos21">Dates to
+          Tones by Eamon Bohan.</a></p>
+    </div>
+  </div>
+</div>
